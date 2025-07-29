@@ -13,8 +13,7 @@ import axios from "axios";
 import { Context } from "./main";
 import Login from "./Pages/Login";
 const App = () => {
-  const { isAuthenticated, setIsAuthenticated, setUser } =
-    useContext(Context);
+  const { isAuthenticated, setIsAuthenticated, setUser } = useContext(Context);
 
   useEffect(() => {
     const fetchUser = async () => {
@@ -37,7 +36,7 @@ const App = () => {
 
   return (
     <>
-      <Router>
+      <Router basename="/Hospital_Frontend">
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
